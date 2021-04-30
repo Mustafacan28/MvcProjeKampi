@@ -3,25 +3,40 @@
     Layout = null;
 }
 
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
 <h3>Mvc Kamp Tablo Örneği - Kategori </h3>
 <br />
-<table>
+<table class="table table-condensed">
     <tr>
-         <th>Id</th>
-         <th>Adı</th>
-         <th>Açıklama</th>
-         <th>Durum</th>
+        <th>Id</th>
+        <th>Adı</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+        <th>Güncelle</th>
     </tr>
     <tr>
         <td>1</td>
         <td>Eğitim</td>
         <td>Açıklama Yaptık</td>
         <td>True</td>
+        <td><button class="btn btn-success">Onayla</button></td>
     </tr>
     <tr>
         <td>2</td>
         <td>Spor</td>
         <td>Açıklama Yapıldı</td>
         <td>True</td>
+        <td><button class="btn btn-success">Onayla</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Kitap</td>
+        <td>Açıklama Yapıldı</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Onayla</button></td>
     </tr>
 </table>
+<button class="btn btn-danger">Yeni Kategori</button>
+<button class="btn btn-warning">İşlemi Onayla</button>
+<button class="btn btn-toolbar">İşlemi Onayla</button>
