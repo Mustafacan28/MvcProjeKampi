@@ -1,0 +1,32 @@
+﻿
+
+@{
+    ViewBag.Title = "Istatıstık";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h1>İstatistik Sayfası</h1>
+<br />
+<table class="table table-danger">
+    <tr>
+
+        <th>Sorgu1</th>
+        <th>Sorgu2</th>
+        <th>Sorgu3</th>
+        <th>Sorgu4</th>
+        <th>Sorgu5</th>
+        
+    </tr>
+    <tr>
+        
+        <th>@ViewBag.Sorgu1</th>
+        <th>@ViewBag.Sorgu2</th>
+        <th>@ViewBag.Sorgu3</th>
+        <th>@ViewBag.Sorgu4.Count</th>
+        <th>@ViewBag.Sorgu5</th>
+
+    </tr>
+
+</table>
