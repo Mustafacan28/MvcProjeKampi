@@ -1,0 +1,67 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Hakkımda Veri Listesi</h2>
+
+<br />
+
+
+<label>Başlık Seçin</label>
+<select name="AboutID">
+    @foreach (var item in Model)
+    {
+
+        <option>@item.AboutID</option>
+        
+    }
+</select>
+<br />
+<br />
+<table class="table table-bordered">
+
+
+    <tr>
+        <th class="bg-warning text-white">ID</th>
+        <th class="bg-warning text-white">Hakkımda Başlığı</th>
+        <th class="bg-warning text-white">Durum</th>
+        <th class="bg-warning text-white">Aktif Yap</th>
+
+    </tr>
+
+    @{ string hds1 = "";}
+    @{ string hds2 = "";}
+
+    @foreach (var item in Model)
+    {
+        if (item.AboutStatus == false)
+        {
+
+            hds1 = "Pasif";
+            hds2 = "Aktif Yap";
+        }
+        else if (item.AboutStatus == true)
+        {
+
+
+            hds1 = "Aktif";
+            hds2 = "Pasif Yap";
+        }
+        <tr>
+            <td>@item.AboutID</td>
+            <td>@item.AboutDetails2</td>
+            <td>@hds1</td>
+            <td><a href="/About/DeleteAbout/@item.AboutID" class="btn btn-outline-danger">@hds2</a></td>
+        </tr>
+    }
+
+</table>
+
+<button class="btn btn-outline-primary" style="color:black" data-toggle="modal" data-target="#Modal1">
+    Yeni Hakkımızda Yazı Girişi
+</button>
+@Html.Action("AboutPartial", "About")

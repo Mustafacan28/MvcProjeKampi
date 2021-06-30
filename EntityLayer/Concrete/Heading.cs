@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace EntityLayer.Concrete
 
         public DateTime HeadingDate { get; set; }
 
+        public bool HeadingStatus { get; set; }
 
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
@@ -26,5 +28,8 @@ namespace EntityLayer.Concrete
         public virtual Writer Writer { get; set; }
 
         public ICollection<Content> Contents { get; set; }
+
+        
+        
     }
 }

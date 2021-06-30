@@ -19,13 +19,22 @@ namespace EntityLayer.Concrete
         public string WriterSurName { get; set; }
 
         [StringLength(100)]
+        public string writerAbout{ get; set; }
+
+        [StringLength(100)]
         public string WriterImage { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string WriterMail { get; set; }
 
-        [StringLength(20)]
+        [StringLength(100)]
         public string WriterPassword { get; set; }
+
+        [StringLength(50)]
+        public string WriterTitle { get; set; }
+
+        public bool WriterStatus { get; set; }
+
 
 
         public ICollection<Heading> Headings { get; set; }

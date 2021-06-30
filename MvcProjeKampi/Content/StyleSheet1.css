@@ -1,0 +1,21 @@
+﻿.aqua {
+    background: #00FFFF
+}
+
+.gecis {
+    background: #a639b0
+}
+.gecis:hover{
+    background: #b6ff00
+}
+
+.gec {
+    background: #28a745
+}
+.gec:hover{
+    background: #ffffff
+}
+
+.aqua:hover {
+    background: linear-gradient(#fff,#f8b500);
+}
